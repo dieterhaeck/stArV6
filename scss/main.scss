@@ -1,0 +1,156 @@
+/* initial stuff */
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+
+@import "_variables";
+@import "_normalize";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #FFF;
+  color: $text__color;
+}
+
+body {
+  font-family: "Verdana", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 145%;
+  zoom: 1;
+}
+
+.header, .main, .footer {
+  margin: 0 auto;
+}
+
+p, h1 {
+  padding: 0;
+  margin: 0;
+
+  &.justify {
+    text-align: justify;
+    text-align-last: right;
+    -moz-text-align-last: right;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: $text__color;
+
+  &:hover {
+    color: $text__color--highlight;
+  }
+}
+
+.highlight {
+  color: $text__color--highlight;
+}
+
+.header {
+  position: relative;
+  margin-top: $main__margin-top;
+  width: $main__width;
+  padding-right: $section__border-width;
+  border-top: $section__border;
+  border-left: $section__border;
+
+  &:before {
+    content: '';
+    position: absolute;
+    border-right: $section__border;
+    top: -($main__margin-top + $section__border-width);
+    right: 0;
+    height: $main__margin-top;
+  }
+
+  &__heading {
+    @extend .section__heading;
+  }
+
+  &__content {
+    @extend .section__content;
+    display: flex;
+    width: 100%;
+
+    .no-flexbox & {
+      display: table;
+    }
+  }
+
+  &__list, &__figure {
+    margin: 0;
+
+    .no-flexbox & {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+}
+
+.main {
+  width: $main__width;
+
+  &__section {
+    border-top: $section__border;
+
+    &--align-right {
+      border-right: $section__border;
+      text-align: right;
+
+      &.main__section--margin-1unit {
+        margin-right: $section__margin--unit;
+      }
+
+      &.main__section--margin-2unit {
+        margin-right: $section__margin--unit * 2;
+      }
+    }
+
+    &--align-left {
+      border-left: $section__border;
+      text-align: left;
+
+      &.main__section--margin-1unit {
+        margin-left: $section__margin--unit;
+      }
+
+      &.main__section--margin-2unit {
+        margin-left: $section__margin--unit * 2;
+      }
+    }
+  }
+}
+
+.section {
+  &__heading {
+    padding: $section__padding;
+    cursor: pointer;
+
+    &--highlight {
+      color: $text__color--highlight;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 $section__padding;
+    overflow: hidden;
+    @include transition-property(all);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease);
+
+    &[data-state='active'] {
+      max-height: 500px;
+      opacity: 1;
+      padding-bottom: $section__padding;
+    }
+  }
+}
+
+#mti_wfs_colophon {
+  display: none!important;
+}
