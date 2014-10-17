@@ -8,8 +8,9 @@ $text__color--highlight: #fb9600;
 
 $main__width: 970px;
 $main__margin-top: 30px;
+$main__margin-bottom: $main__margin-top;
 
 $section__border-width: 5px;
-$section__border: $section__border-width solid $main__color;
+$section__border: $section__border-width solid $text__color;
 $section__padding: 20px;
 $section__margin--unit: 13%;

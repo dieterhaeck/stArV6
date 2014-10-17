@@ -20,10 +20,6 @@ body {
   zoom: 1;
 }
 
-.header, .main, .footer {
-  margin: 0 auto;
-}
-
 p, h1 {
   padding: 0;
   margin: 0;
@@ -49,13 +45,17 @@ a {
   color: $text__color--highlight;
 }
 
+.header, .main, .footer {
+  margin: 0 auto;
+  width: $main__width;
+}
+
 .header {
   position: relative;
   margin-top: $main__margin-top;
-  width: $main__width;
-  padding-right: $section__border-width;
-  border-top: $section__border;
-  border-left: $section__border;
+
+  @extend .main__section;
+  @extend .main__section--align-left;
 
   &:before {
     content: '';
@@ -91,8 +91,6 @@ a {
 }
 
 .main {
-  width: $main__width;
-
   &__section {
     border-top: $section__border;
 
@@ -101,11 +99,15 @@ a {
       text-align: right;
 
       &.main__section--margin-1unit {
-        margin-right: $section__margin--unit;
+        &, & + .main__section {
+          margin-right: $section__margin--unit;
+        }
       }
 
       &.main__section--margin-2unit {
-        margin-right: $section__margin--unit * 2;
+        &, & + .main__section {
+          margin-right: $section__margin--unit * 2;
+        }
       }
     }
 
@@ -114,11 +116,15 @@ a {
       text-align: left;
 
       &.main__section--margin-1unit {
-        margin-left: $section__margin--unit;
+        &, & + .main__section {
+          margin-left: $section__margin--unit;
+        }
       }
 
       &.main__section--margin-2unit {
-        margin-left: $section__margin--unit * 2;
+        &, & + .main__section {
+          margin-left: $section__margin--unit * 2;
+        }
       }
     }
   }
@@ -148,6 +154,29 @@ a {
       opacity: 1;
       padding-bottom: $section__padding;
     }
+  }
+}
+
+.footer {
+  position: relative;
+  margin-bottom: $main__margin-bottom;
+  border-bottom: $section__border;
+
+  @extend .main__section;
+  @extend .main__section--margin-1unit;
+  @extend .main__section--align-right;
+
+  &:after {
+    content: '';
+    position: absolute;
+    border-right: $section__border;
+    bottom: -($main__margin-bottom + $section__border-width);
+    left: 0;
+    height: $main__margin-bottom;
+  }
+
+  .footer__heading {
+    @extend .section__heading;
   }
 }
 
