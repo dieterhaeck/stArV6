@@ -160,23 +160,31 @@ a {
 .footer {
   position: relative;
   margin-bottom: $main__margin-bottom;
-  border-bottom: $section__border;
-
-  @extend .main__section;
-  @extend .main__section--margin-1unit;
-  @extend .main__section--align-right;
 
   &:after {
     content: '';
     position: absolute;
     border-right: $section__border;
-    bottom: -($main__margin-bottom + $section__border-width);
+    bottom: -$main__margin-bottom;
     left: 0;
     height: $main__margin-bottom;
   }
 
+  .footer__heading, .footer__content {
+    @extend .main__section;
+    @extend .main__section--margin-1unit;
+    @extend .main__section--align-right;
+    padding: $section__padding;
+  }
+
   .footer__heading {
-    @extend .section__heading;
+    margin-left: $section__margin--unit * 2;
+  }
+
+  .footer__content {
+    border-top: none;
+    border-bottom: $section__border;
+    padding-top: 0;
   }
 }
 
