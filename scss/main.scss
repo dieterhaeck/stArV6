@@ -131,28 +131,25 @@ a {
 }
 
 .section {
-  &__heading {
+  &__heading, &__content {
     padding: $section__padding;
-    cursor: pointer;
+  }
 
+  &__heading {
     &--highlight {
       color: $text__color--highlight;
+    }
+
+    [data-state] & {
+      cursor: pointer;
     }
   }
 
   &__content {
-    max-height: 0;
-    opacity: 0;
-    padding: 0 $section__padding;
-    overflow: hidden;
-    @include transition-property(all);
-    @include transition-duration(.5s);
-    @include transition-timing-function(ease);
+    padding-top: 0;
 
-    &[data-state='active'] {
-      max-height: 500px;
-      opacity: 1;
-      padding-bottom: $section__padding;
+    [data-state='inactive'] & {
+      display: none;
     }
   }
 }

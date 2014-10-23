@@ -1,23 +1,23 @@
 $(function() {
     console.log('doc ready');
-    $('h1').click(function() {
+    $('.section__heading, .header__heading').click(function() {
         var $this = $(this);
-        var $sibling =  $this.siblings('.section__content, .header__content');
-        if(!$sibling.hasClass('active')) {
-            $('.section__content.active').removeClass('active');
-            $sibling.addClass('active');
+        var $sibling =  $this.siblings('[data-state]');
+        if($sibling.data('state') === 'inactive') {
+            $('[data-state]').data('state','inactive').slideUp();
+            $sibling.data('state','active').slideDown();
             goToByScroll($this);
         } else
-            $('.section__content.active').removeClass('active');
+            $('[data-state]').data('state','inactive').slideUp();
     });
 });
 
 $(window).load(function() {
     console.log('window loaded');
-    $('img.lazy-img').each(function() {
+    $('[data-lazysrc]').each(function() {
         console.log('loading image');
         var $this = $(this);
-        $this.attr('src', $this.attr('data-src')).removeAttr('data-src');
+        $this.attr('src', $this.data('lazysrc')).removeAttr('data-lazysrc');
     });
 
     $('#news_revealer').click(function() {
