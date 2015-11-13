@@ -24,6 +24,29 @@ $(window).load(function() {
         $('#news_hidden').slideToggle();
         return false;
     });
+
+    $('#slideshow').bjqs({
+        'height' : 320,
+        'width' : 640,
+        'responsive' : true,
+        'randomstart' : true,
+        'showcontrols' : false,
+        'showmarkers' : false,
+        'animtype' : 'fade',
+        'automatic' : true,
+        'animspeed' : 5000
+    });
+
+    $('#gallery').bjqs({
+        'height' : 'auto',
+        'width' : 840,
+        'responsive' : true,
+        'randomstart' : false,
+        'showcontrols' : true,
+        'showmarkers' : true,
+        'animtype' : 'slide',
+        'automatic' : false
+    });
 });
 
 function goToByScroll($anchor) {

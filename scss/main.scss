@@ -41,6 +41,11 @@ a {
   }
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 .highlight {
   color: $text__color--highlight;
 }
@@ -185,6 +190,91 @@ a {
   }
 }
 
+*[data-state=inactive] {
+  display: none;
+}
+
+/* GEEN IDEE WAT DIT DOET */
+
 #mti_wfs_colophon {
   display: none!important;
+}
+
+/* SLIDESHOW STUFF */
+
+#slideshow {
+  padding-right: 80px;
+  box-sizing: content-box;
+}
+
+#gallery {
+  position: relative;
+  padding: 20px 0;
+}
+
+ul.bjqs {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: none;
+}
+
+li.bjqs-slide {
+  position: absolute;
+  display: none;
+  padding: 0 20px;
+}
+
+ul.bjqs-controls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &.v-centered li {
+    position: absolute;
+    top: 0;
+    line-height: 20px;
+
+    &.bjqs-next { right: 20px; }
+    &.bjqs-prev { left: 20px; }
+  }
+}
+
+ol.bjqs-markers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &.h-centered {
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+p.bjqs-caption {
+  display: block;
+  width: 96%;
+  margin: 0;
+  padding: 2%;
+  position: absolute;
+  bottom: 0;
 }
