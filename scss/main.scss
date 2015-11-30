@@ -31,6 +31,11 @@ p, h1 {
   }
 }
 
+h1, h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
 a {
   text-decoration: none;
   font-weight: bold;
@@ -92,6 +97,11 @@ ul {
       display: table-cell;
       vertical-align: top;
     }
+  }
+
+  &__figure {
+    float: right;
+    margin-right: 105px;
   }
 }
 
@@ -190,7 +200,7 @@ ul {
   }
 }
 
-*[data-state=inactive] {
+#news_hidden {
   display: none;
 }
 
@@ -205,11 +215,64 @@ ul {
 #slideshow {
   padding-right: 80px;
   box-sizing: content-box;
+  min-height: 320px;
 }
 
 #gallery {
   position: relative;
   padding: 20px 0;
+  height: 580px;
+  box-sizing: content-box;
+
+  li.bjqs-slide {
+    padding: 0 20px;
+  }
+
+  .gallery-slides {
+    padding: 20px 0 0 0;
+    box-sizing: content-box;
+
+    li.bjqs-slide {
+      padding: 0;
+      text-align: center;
+
+      img {
+        height: auto!important;
+        width: auto!important;
+        max-width:100%;
+        max-height:100%;
+      }
+    }
+
+    ul.bjqs-controls {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      z-index: 9999;
+      position: absolute;
+      top: -4px;
+      left: 0;
+      right: 0;
+
+      &.v-centered li {
+        position: absolute;
+        top: 0;
+
+        &.bjqs-next {
+          right: 0px;
+        }
+
+        &.bjqs-prev {
+          left: 0px;
+        }
+
+        :after {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
 }
 
 ul.bjqs {
@@ -217,14 +280,13 @@ ul.bjqs {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  //overflow: hidden;
   display: none;
 }
 
 li.bjqs-slide {
   position: absolute;
   display: none;
-  padding: 0 20px;
 }
 
 ul.bjqs-controls {
@@ -240,10 +302,29 @@ ul.bjqs-controls {
   &.v-centered li {
     position: absolute;
     top: 0;
-    line-height: 20px;
 
-    &.bjqs-next { right: 20px; }
-    &.bjqs-prev { left: 20px; }
+    &.bjqs-next {
+      right: 20px;
+      font-size: 0;
+
+      :after {
+        content: '>';
+      }
+    }
+
+    &.bjqs-prev {
+      left: 20px;
+      font-size: 0;
+
+      :after {
+        content: '<';
+      }
+    }
+
+    :after {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -253,9 +334,9 @@ ol.bjqs-markers {
   margin: 0;
   line-height: 20px;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0!important;
+  left: 0!important;
+  right: 0!important;
 
   &.h-centered {
     text-align: center;
@@ -266,6 +347,15 @@ ol.bjqs-markers {
 
     a {
       display: inline-block;
+      margin-left: 20px;
+    }
+
+    &:first-child a {
+      margin-left: 0;
+    }
+
+    &.active-marker a {
+      color: $text__color--highlight;
     }
   }
 }

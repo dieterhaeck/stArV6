@@ -13,7 +13,6 @@
         <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png"/>
         <link rel="apple-touch-icon-precomposed" href="icon"/>
         <link rel="stylesheet" href="css/main.css">
-        <!--script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script-->
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -34,9 +33,13 @@
         <![endif]-->
         <script>if(top!=self) top.location.href = location.href;</script>
 
-        <header class="header">
+        <header class="header" data-state="inactive">
             <h1 class="header__heading"><img id="logo" src="img/logo star.jpg" alt="Steurbaut Architecten bvba"/></h1>
-            <div class="header__content" data-state="inactive">
+            <div class="header__content">
+                <figure class="header__figure">
+                    <img src="img/pasfoto.jpg" alt="foto ir. arch. Lieselotte Steurbaut"/>
+                    <figcaption>Ir. Architect<br/>L. Steurbaut</figcaption>
+                </figure>
                 <ul class="header__list">
                     <li>2012 Oprichting vennootschap Steurbaut Architecten bvba 'stArchitecten'</li>
                     <li>2010 Professioneel lid PassiefHuisPlatform</li>
@@ -49,17 +52,13 @@
                     <li>2007 Start zelfstandige architectenpraktijk</li>
                     <li>2007 Afgestudeerd Burgerlijk Ingenieur Architect – UGent</li>
                 </ul>
-                <figure class="header__figure">
-                    <img src="img/pasfoto.jpg" alt="foto ir. arch. Lieselotte Steurbaut"/>
-                    <figcaption>Ir. Architect<br/>L. Steurbaut</figcaption>
-                </figure>
             </div>
         </header>
 
         <main class="main">
-            <section class="section main__section main__section--align-right main__section--margin-1unit">
+            <section class="section main__section main__section--align-right main__section--margin-1unit" data-state="inactive">
                 <h1 class="section__heading section__heading--highlight">&bdquo;energy conscious starchitecture&rdquo;</h1>
-                <div class="section__content" data-state="inactive">
+                <div class="section__content">
                     <p>stArchitecten werd in 2012 opgericht door Ir. Architect Lieselotte Steurbaut.</p>
                     <p>stArchitecten bestaat uit 3 voltijdse (Ir.) Architecten en 2 freelance medewerkers.</p>
                     <p>Zaakvoeder Ir. Architect Lieselotte Steurbaut studeerde Burgerlijk Ingenieur Architect te Gent, en behaalde ook een Master in de ‘Energietechniek in Gebouwen’. Zij deed meerdere jaren ervaring op als projectleider in architectenbureaus in Ternat en Oudenaarde, en raakte gepassioneerd door ‘duurzaam en energiezuinig bouwen’. Zij volgde elke mogelijke opleiding omtrent passief bouwen en energieprestaties van gebouwen.</p>
@@ -72,270 +71,131 @@
 
             <section id="slideshow" class="main__section main__section--align-left main__section--margin-1unit bjqs-main">
                 <ul class="bjqs">
-                    <li><img data-lazysrc="img/banner1.jpg" src="img/banner22.jpg" title="" alt="banner project HAN"/></li>
-                    <li><img data-lazysrc="img/banner2.jpg" src="img/banner22.jpg" title="" alt="banner project HAN"/></li>
-                    <li><img data-lazysrc="img/banner3.jpg" src="img/banner22.jpg" title="" alt="banner project HAN"/></li>
-                    <li><img data-lazysrc="img/banner12.jpg" src="img/banner22.jpg" title="" alt="publiciteit"/></li>
-                    <li><img data-lazysrc="img/banner4.jpg" src="img/banner22.jpg" title="" alt="banner project DMS"/></li>
-                    <li><img data-lazysrc="img/banner5.jpg" src="img/banner22.jpg" title="" alt="banner project DMS"/></li>
-                    <li><img data-lazysrc="img/banner7.jpg" src="img/banner22.jpg" title="" alt="banner wedstrijd"/></li>
-                    <li><img data-lazysrc="img/banner8.jpg" src="img/banner22.jpg" title="" alt="banner project HAN"/></li>
-                    <li><img data-lazysrc="img/banner9.jpg" src="img/banner22.jpg" title="" alt="banner project HAN"/></li>
-                    <li><img data-lazysrc="img/banner10.jpg" src="img/banner22.jpg" title="" alt="banner project HAN"/></li>
-                    <li><img data-lazysrc="img/banner13.jpg" src="img/banner22.jpg" title="" alt="publiciteit"/></li>
-                    <li><img data-lazysrc="img/banner11.jpg" src="img/banner22.jpg" title="" alt="banner project WILGZ"/></li>
-                    <li><img data-lazysrc="img/banner14.jpg" src="img/banner22.jpg" title="" alt="banner project FLW"/></li>
-                    <li><img data-lazysrc="img/banner15.jpg" src="img/banner22.jpg" title="" alt="banner project DPS"/></li>
-                    <li><img data-lazysrc="img/banner16.jpg" src="img/banner22.jpg" title="" alt="banner project STR"/></li>
-                    <li><img data-lazysrc="img/banner17.jpg" src="img/banner22.jpg" title="" alt="banner project STR"/></li>
-                    <li><img data-lazysrc="img/banner18.jpg" src="img/banner22.jpg" title="" alt="banner project STR"/></li>
-                    <li><img data-lazysrc="img/banner19.jpg" src="img/banner22.jpg" title="" alt="banner project STR"/></li>
-                    <li><img data-lazysrc="img/banner20.jpg" src="img/banner22.jpg" title="" alt="banner project STN"/></li>
-                    <li><img data-lazysrc="img/banner21.jpg" src="img/banner22.jpg" title="" alt="banner project STN"/></li>
-                    <li><img data-lazysrc="img/banner23.jpg" src="img/banner22.jpg" title="" alt="banner project STN"/></li>
-                    <li><img data-lazysrc="img/banner24.jpg" src="img/banner22.jpg" title="" alt="banner project STN"/></li>
-                    <li><img data-lazysrc="img/banner25.jpg" src="img/banner22.jpg" title="" alt="banner project STN"/></li>
-                    <li><img data-lazysrc="img/banner26.jpg" src="img/banner22.jpg" title="" alt="banner project STN"/></li>
+                    <li><img src="img/00BANNER001.jpeg" title="" alt="Banner 1"/></li>
+                    <li><img data-lazysrc="img/00BANNER002.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 2"/></li>
+                    <li><img data-lazysrc="img/00BANNER003.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 3"/></li>
+                    <li><img data-lazysrc="img/00BANNER004.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 4"/></li>
+                    <li><img data-lazysrc="img/00BANNER005.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 5"/></li>
+                    <li><img data-lazysrc="img/00BANNER006.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 6"/></li>
+                    <li><img data-lazysrc="img/00BANNER007.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 7"/></li>
+                    <li><img data-lazysrc="img/00BANNER008.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 8"/></li>
+                    <li><img data-lazysrc="img/00BANNER009.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 9"/></li>
+                    <li><img data-lazysrc="img/00BANNER010.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 10"/></li>
+                    <li><img data-lazysrc="img/00BANNER011.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 11"/></li>
+                    <li><img data-lazysrc="img/00BANNER012.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 12"/></li>
+                    <li><img data-lazysrc="img/00BANNER013.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 13"/></li>
+                    <li><img data-lazysrc="img/00BANNER014.jpeg" src="img/00BANNER001.jpeg" title="" alt="Banner 14"/></li>
                 </ul>
             </section>
 
-            <section class="section main__section main__section--align-right">
+            <section class="section main__section main__section--align-right" data-state="inactive">
                 <h1 class="section__heading">Realisaties</h1>
                 <div id="gallery" class="section__content bjqs-main">
                     <ul class="bjqs">
-                        <li data-marker="Interieur" class="bjqs-main">
-                            <ul class="bjqs">
-                                <li><img data-lazysrc="img/02INTERIEUR001.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 1" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR002.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 2" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR003.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 3" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR004.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 4" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR005.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 5" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR006.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 6" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR007.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 7" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR008.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 8" width="800"/></li>
-                                <li><img data-lazysrc="img/02INTERIEUR009.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 9" width="800"/></li>
-                            </ul>
+                        <li data-marker="Passief">
+                            <div class="bjqs-main gallery-slides">
+                                <ul class="bjqs">
+                                    <li><img src="img/01PASSIEF001.jpg" title="" alt="Passief 1"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF002.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 2"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF003.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 3"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF004.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 4"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF005.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 5"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF006.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 6"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF007.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 7"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF008.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 8"/></li>
+                                    <li><img data-lazysrc="img/01PASSIEF009.jpg" src="img/01PASSIEF001.jpg" title="" alt="Passief 9"/></li>
+                                </ul>
+                            </div>
                         </li>
-                        <li data-marker="old">
+                        <li data-marker="Interieur">
+                            <div class="bjqs-main gallery-slides">
+                                <ul class="bjqs">
+                                    <li><img src="img/02INTERIEUR001.jpg" title="" alt="Interieur 1"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR002.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 2"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR003.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 3"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR004.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 4"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR005.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 5"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR006.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 6"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR007.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 7"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR008.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 8"/></li>
+                                    <li><img data-lazysrc="img/02INTERIEUR009.jpg" src="img/02INTERIEUR001.jpg" title="" alt="Interieur 9"/></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li data-marker="Uitbreiding">
+                            <div class="bjqs-main gallery-slides">
+                                <ul class="bjqs">
+                                    <li><img src="img/03UITBR001.jpg" title="" alt="Uitbreiding 1"/></li>
+                                    <li><img data-lazysrc="img/03UITBR002.jpg" src="img/03UITBR001.jpg" title="" alt="Uitbreiding 2"/></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li data-marker="Verbouwing">
+                            <div class="bjqs-main gallery-slides">
+                                <ul class="bjqs">
+                                    <li><img src="img/04VERBOUW001.jpg" title="" alt="Verbouwing 1"/></li>
+                                    <li><img data-lazysrc="img/04VERBOUW002.jpg" src="img/04VERBOUW001.jpg" title="" alt="Verbouwing 2"/></li>
+                                    <li><img data-lazysrc="img/04VERBOUW003.jpg" src="img/04VERBOUW001.jpg" title="" alt="Verbouwing 3"/></li>
+                                    <li><img data-lazysrc="img/04VERBOUW004.jpg" src="img/04VERBOUW001.jpg" title="" alt="Verbouwing 4"/></li>
+                                    <li><img data-lazysrc="img/04VERBOUW005.jpg" src="img/04VERBOUW001.jpg" title="" alt="Verbouwing 5"/></li>
+                                    <li><img data-lazysrc="img/04VERBOUW006.jpg" src="img/04VERBOUW001.jpg" title="" alt="Verbouwing 6"/></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li data-marker="Ontwerp">
+                            <div class="bjqs-main gallery-slides">
+                                <ul class="bjqs">
+                                    <li><img src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 1"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP002.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 2"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP003.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 3"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP004.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 4"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP005.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 5"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP006.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 6"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP007.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 7"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP008.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 8"/></li>
+                                    <li><img data-lazysrc="img/05ONTWERP009.jpg" src="img/05ONTWERP001.jpg" title="" alt="Ontwerp 9"/></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li data-marker="Werf">
+                            <div class="bjqs-main gallery-slides">
+                                <ul class="bjqs">
+                                    <li><img src="img/06WERF001.jpg" title="" alt="Werf 1"/></li>
+                                    <li><img data-lazysrc="img/06WERF002.jpg" src="img/06WERF001.jpg" title="" alt="Werf 2"/></li>
+                                    <li><img data-lazysrc="img/06WERF003.jpg" src="img/06WERF001.jpg" title="" alt="Werf 3"/></li>
+                                    <li><img data-lazysrc="img/06WERF004.jpg" src="img/06WERF001.jpg" title="" alt="Werf 4"/></li>
+                                    <li><img data-lazysrc="img/06WERF005.jpg" src="img/06WERF001.jpg" title="" alt="Werf 5"/></li>
+                                    <li><img data-lazysrc="img/06WERF006.jpg" src="img/06WERF001.jpg" title="" alt="Werf 6"/></li>
+                                    <li><img data-lazysrc="img/06WERF007.jpg" src="img/06WERF001.jpg" title="" alt="Werf 7"/></li>
+                                    <li><img data-lazysrc="img/06WERF008.jpg" src="img/06WERF001.jpg" title="" alt="Werf 8"/></li>
+                                    <li><img data-lazysrc="img/06WERF009.jpg" src="img/06WERF001.jpg" title="" alt="Werf 9"/></li>
+                                    <li><img data-lazysrc="img/06WERF010.jpg" src="img/06WERF001.jpg" title="" alt="Werf 10"/></li>
+                                    <li><img data-lazysrc="img/06WERF011.jpg" src="img/06WERF001.jpg" title="" alt="Werf 11"/></li>
+                                    <li><img data-lazysrc="img/06WERF012.jpg" src="img/06WERF001.jpg" title="" alt="Werf 12"/></li>
+                                    <li><img data-lazysrc="img/06WERF013.jpg" src="img/06WERF001.jpg" title="" alt="Werf 13"/></li>
+                                    <li><img data-lazysrc="img/06WERF014.jpg" src="img/06WERF001.jpg" title="" alt="Werf 14"/></li>
+                                    <li><img data-lazysrc="img/06WERF015.jpg" src="img/06WERF001.jpg" title="" alt="Werf 15"/></li>
+                                    <li><img data-lazysrc="img/06WERF016.jpg" src="img/06WERF001.jpg" title="" alt="Werf 16"/></li>
+                                    <li><img data-lazysrc="img/06WERF017.jpg" src="img/06WERF001.jpg" title="" alt="Werf 17"/></li>
+                                    <li><img data-lazysrc="img/06WERF018.jpg" src="img/06WERF001.jpg" title="" alt="Werf 18"/></li>
+                                    <li><img data-lazysrc="img/06WERF019.jpg" src="img/06WERF001.jpg" title="" alt="Werf 19"/></li>
+                                    <li><img data-lazysrc="img/06WERF020.jpg" src="img/06WERF001.jpg" title="" alt="Werf 20"/></li>
+                                    <li><img data-lazysrc="img/06WERF021.jpg" src="img/06WERF001.jpg" title="" alt="Werf 21"/></li>
+                                    <li><img data-lazysrc="img/06WERF022.jpg" src="img/06WERF001.jpg" title="" alt="Werf 22"/></li>
+                                    <li><img data-lazysrc="img/06WERF023.jpg" src="img/06WERF001.jpg" title="" alt="Werf 23"/></li>
+                                    <li><img data-lazysrc="img/06WERF024.jpg" src="img/06WERF001.jpg" title="" alt="Werf 24"/></li>
+                                    <li><img data-lazysrc="img/06WERF025.jpg" src="img/06WERF001.jpg" title="" alt="Werf 25"/></li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <!--div class="scrollContainer">
-                <div class="navigation">
-                    <div class="navigation-wrapper-left">&nbsp;</div>
-                    <div class="navigation-wrapper-right">&nbsp;</div>
-                    <div class="navigation-wrapper nav-right">
-                        <h2 class="navigation-link"><a href="#real_tab1">STR</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab2">STN</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab3">HAN</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab4">DMS</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab5">BAM</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab6">DUG</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab7">SCG</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab8">MOT</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab9">NAK</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab10">COS</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab11">DGO</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab12">DPS</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab13">FLW</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab14">DGW</a></h2>
-                        <h2 class="navigation-link"><a href="#real_tab15">DWW</a></h2>
-                    </div>
-                </div>
-            </div>
-                <div class="panel" id="real_tab1">
-                    <div class="panel-wrapper">
-                    </div>
-                </div>
-                <div class="panel" id="real_tab2">
-                    <div class="panel-wrapper">
-                        <p>Ontwerp toonzaal/kantoor/magazijn - architectuurontwerp &amp; interieurontwerp te Oudenaarde</p>
-                        <div class="panel-images">
-                            <div class="imagev floatright"><img src="img/Stn-3.jpg" alt="Stn-3"/></div>
-                            <div class="imagev floatright"><img src="img/Stn-2.jpg" alt="Stn-2"/></div>
-                            <div class="imagev floatright first"><img src="img/Stn-1.jpg" alt="Stn-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="image floatright"><img src="img/Stn-5.jpg" alt="Stn-5"/></div>
-                            <div class="image floatright first"><img src="img/Stn-4.jpg" alt="Stn-4"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab3">
-                    <div class="panel-wrapper">
-                        <p>Passieve ééngezinswoning Oudenaarde - architectuurontwerp &amp; interieurontwerp</p>
-                        <p><b>Gecertificeerd passief huis en nul-energie-woning</b></p>
-                        <p><a href="pdf/DOSSIER 66.pdf" target="_blank">>> Klik hier voor de conceptnota</a></p>
-                        <div class="panel-images">
-                            <div class="image floatright"><img src="img/haecn-7.jpg" alt="haecn-7"/></div>
-                            <div class="image floatright"><img src="img/haecn-6.jpg" alt="haecn-6"/></div>
-                            <div class="image floatright first"><img src="img/haecn-5.jpg" alt="haecn-5"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="imagev floatright"><img src="img/haecn-4.jpg" alt="haecn-1"/></div>
-                            <div class="imagev floatright"><img src="img/haecn-3.jpg" alt="haecn-2"/></div>
-                            <div class="imagev floatright"><img src="img/haecn-2.jpg" alt="haecn-3"/></div>
-                            <div class="imagev floatright first"><img src="img/haecn-1.jpg" alt="haecn-4"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab4">
-                    <div class="panel-wrapper">
-                        <p>Lage Energie Verbouwing Villa Sint-Martens-Latem - architectuurontwerp &amp; interieurontwerp</p>
-                        <div class="panel-images">
-                            <div class="image floatright"><img src="img/Dmeds-3.jpg" alt="Dmeds-3"/></div>
-                            <div class="image floatright"><img src="img/Dmeds-2.jpg" alt="Dmeds-2"/></div>
-                            <div class="image floatright first"><img src="img/Dmeds-1.jpg" alt="Dmeds-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="image floatright"><img src="img/Dmeds-6.jpg" alt="Dmeds-6"/></div>
-                            <div class="image floatright"><img src="img/Dmeds-5.jpg" alt="Dmeds-5"/></div>
-                            <div class="image floatright first"><img src="img/Dmeds-4.jpg" alt="Dmeds-4"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab5">
-                    <div class="panel-wrapper">
-                        <p>Passieve eengezinswoning te Meise</p>
-                        <div class="panel-images">
-                            <div class="imagev floatright"><img src="img/Baekm-4.jpg" alt="Baekm-1"/></div>
-                            <div class="imagev floatright"><img src="img/Baekm-3.jpg" alt="Baekm-2"/></div>
-                            <div class="imagev floatright"><img src="img/Baekm-2.jpg" alt="Baekm-3"/></div>
-                            <div class="imagev floatright first"><img src="img/Baekm-1.jpg" alt="Baekm-4"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="imagev floatright"><img src="img/Baekm-8.jpg" alt="Baekm-8"/></div>
-                            <div class="imagev floatright"><img src="img/Baekm-7.jpg" alt="Baekm-7"/></div>
-                            <div class="imagev floatright"><img src="img/Baekm-6.jpg" alt="Baekm-6"/></div>
-                            <div class="imagev floatright first"><img src="img/Baekm-5.jpg" alt="Baekm-5"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab6">
-                    <div class="panel-wrapper">
-                        <p>Verbouwing rijwoning te Gentbrugge</p>
-                        <div class="panel-images">
-                            <div class="imagev floatright"><img src="img/Dug-4.jpg" alt="Dug-4"/></div>
-                            <div class="imagev floatright"><img src="img/Dug-3.jpg" alt="Dug-3"/></div>
-                            <div class="imagev floatright"><img src="img/Dug-2.jpg" alt="Dug-2"/></div>
-                            <div class="imagev floatright first"><img src="img/Dug-1.jpg" alt="Dug-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="imagev floatright"><img src="img/Dug-8.jpg" alt="Dug-8"/></div>
-                            <div class="imagev floatright"><img src="img/Dug-7.jpg" alt="Dug-7"/></div>
-                            <div class="imagev floatright"><img src="img/Dug-6.jpg" alt="Dug-6"/></div>
-                            <div class="imagev floatright first"><img src="img/Dug-5.jpg" alt="Dug-5"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab7">
-                    <div class="panel-wrapper">
-                        <p>Verbouwing atelier tot gezinswoning te Gent</p>
-                        <div class="panel-images">
-                            <div class="imagev floatright first"><img src="img/Scheg-1.jpg" alt="Scheg-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="image floatright"><img src="img/Scheg-3.jpg" alt="Scheg-3"/></div>
-                            <div class="image floatright first"><img src="img/Scheg-2.jpg" alt="Scheg-2"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab8">
-                    <div class="panel-wrapper">
-                        <p>Renovatie woning en atelier te Anzegem</p>
-                        <div class="panel-images">
-                            <div class="image floatright"><img src="img/Motmt-2.jpg" alt="Motmt-2"/></div>
-                            <div class="image floatright first"><img src="img/Motmt-1.jpg" alt="Motmt-1"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab9">
-                    <div class="panel-wrapper">
-                        <p>Energetische verbouwing bestaande woning te Kruishoutem</p>
-                        <div class="panel-images">
-                            <div class="imagev floatright"><img src="img/Nak-3.jpg" alt="Nak-2"/></div>
-                            <div class="imagev floatright"><img src="img/Nak-2.jpg" alt="Nak-3"/></div>
-                            <div class="imagev floatright first"><img src="img/Nak-1.jpg" alt="Nak-1"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab10">
-                    <div class="panel-wrapper">
-                        <p>Renovatie en uitbreiding woning te Gent</p>
-                        <div class="panel-images">
-                            <div class="image floatright first"><img src="img/Codds-1.jpg" alt="Codds-1"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab11">
-                    <div class="panel-wrapper">
-                        <p>Herbouw rijwoning te Oudenaarde</p>
-                        <div class="panel-images">
-                            <div class="image floatright first"><img src="img/Dgo-1.jpg" alt="Dgo-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="image floatright"><img src="img/Dgo-4.jpg" alt="Dgo-4"/></div>
-                            <div class="image floatright"><img src="img/Dgo-3.jpg" alt="Dgo-3"/></div>
-                            <div class="image floatright first"><img src="img/Dgo-2.jpg" alt="Dgo-2"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab12">
-                    <div class="panel-wrapper">
-                        <p>Nieuwbouw nulenergiewoning te Sint-Martens-Latem</p>
-                        <div class="panel-images">
-                            <div class="image floatright first"><img src="img/Dps-1.jpg" alt="Dps-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="image floatright"><img src="img/Dps-3.jpg" alt="Dps-3"/></div>
-                            <div class="image floatright first"><img src="img/Dps-2.jpg" alt="Dps-2"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab13">
-                    <div class="panel-wrapper">
-                        <p>Nieuwbouw nulenergiewoning te Watermaal-Bosvoorde</p>
-                        <div class="panel-images">
-                            <div class="image floatright"><img src="img/Flw-3.jpg" alt="Flw-3"/></div>
-                            <div class="image floatright first"><img src="img/Flw-1.jpg" alt="Flw-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="image floatright first"><img src="img/Flw-4.jpg" alt="Flw-4"/></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab14">
-                    <div class="panel-wrapper">
-                        <p>Nieuwbouw passiefwoning te Wetteren</p>
-                        <div class="panel-images">
-                            <div class="image floatright"><img src="img/Dgw-3.jpg" alt="Dgw-3"/></div>
-                            <div class="image floatright"><img src="img/Dgw-2.jpg" alt="Dgw-2"/></div>
-                            <div class="image floatright first"><img src="img/Dgw-1.jpg" alt="Dgw-1"/></div>
-                            <div class="clearfloats"></div>
-                            <div class="image floatright first"><img src="img/Dgw-4.jpg" alt="Dgw-4"/></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel" id="real_tab15">
-                    <div class="panel-wrapper">
-                        <p>Nieuwbouw lage-energiewoning te Wetteren</p>
-                        <div class="panel-images">
-                            <div class="image floatright"><img src="img/Dww-2.jpg" alt="Dww-2"/></div>
-                            <div class="image floatright first"><img src="img/Dww-1.jpg" alt="Dww-1"/></div>
-                            <div class="clearfloats"></div>
-                        </div>
-                    </div>
-                </div>
-            </div-->
-
-            <section class="section main__section main__section--align-left main__section--margin-2unit">
-                <h1 class="section__heading">Nieuws</h1>
-                <div class="section__content" data-state="inactive">
-                    <!--iframe class="akwsrocsvkfzdtkddirp" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fstarchitecten&amp;width=680&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;height=500" scrolling="yes" style="border:none; overflow:hidden; width:680px; height:500px;" allowtransparency="true" frameborder="0"></iframe-->
+            <section class="section main__section main__section--align-left main__section--margin-2unit" data-state="inactive">
+                <h1 class="section__heading">Nieuws & Facebook</h1>
+                <div class="section__content">
+                    <iframe class="akwsrocsvkfzdtkddirp" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fstarchitecten&amp;width=680&amp;colorscheme=light&amp;show_faces=true&amp;border_color&amp;stream=true&amp;header=true&amp;height=500" scrolling="yes" style="border:none; overflow:hidden; width:680px; height:500px;" allowtransparency="true" frameborder="0"></iframe>
                     <a href="#" id="news_revealer">oudere berichten</a>
                     <ul id="news_hidden">
                         <li>2014 sept 12-14 - Deelname aan bouwbeurs <a href="http://www.passivehouse.be/nl" target="_blank">'Passive House'</a> in Tour&amp;Taxis Brussel, zaal A</li>
@@ -379,15 +239,13 @@
 
         <footer class="footer">
             <h1 class="footer__heading">Contact</h1>
-            <address class="footer__content">055/61.09.35 - <a href="mailto:info@starchitecten.be">ls@starchitecten.be</a><br/>ZETEL & CORRESPONDENTIE-ADRES : Nederenamestraat 66  - 9700 Oudenaarde<br/>KANTOOR GEVESTIGD TE : Nederenamestraat 46 - 9700 Oudenaarde (1e verdieping)</address>
+            <address class="footer__content">055/61.09.35 - <a href="mailto:info@starchitecten.be">info@starchitecten.be</a><br/>ZETEL & CORRESPONDENTIE-ADRES : Nederenamestraat 66 - 9700 Oudenaarde<br/>KANTOOR GEVESTIGD TE : Nederenamestraat 46 - 9700 Oudenaarde (1e verdieping)</address>
         </footer>
 
-        <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.4.min.js"><\/script>')</script-->
-        <!--<script src="js/vendor/bootstrap.min.js"></script>-->
         <script src="js/vendor/jquery-2.1.4.min.js"></script>
         <script src="js/vendor/bjqs-1.3.min.js"></script>
         <script src="js/main.js"></script>
-        <!--script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-28196394-1');ga('send','pageview');</script-->
+        <script type="text/javascript" src="http://fast.fonts.com/jsapi/80c62bfa-0353-47d6-acff-8ed9eb3a1799.js" defer="defer" async="async"></script>
+        <script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-28196394-1');ga('send','pageview');</script>
     </body>
 </html>
